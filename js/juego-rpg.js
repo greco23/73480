@@ -36,9 +36,9 @@ function crearPersonaje() {
 //SELECCION DEL ENEMIGO
 function seleccionarEnemigo() {
     let enemigo = enemigos[Math.floor(Math.random() * enemigos.length)];
-    let vidaEnemigo = 100;
+    let vidaEnemigo = Math.floor(Math.random() * 30) + 70;
     console.log(`\nApareció un ${enemigo} con ${vidaEnemigo} de vida\n`);
-    return { nombre: enemigo, vida: vidaEnemigo };
+    return {nombre: enemigo, vida: vidaEnemigo};
 }
 
 //COMBATE
@@ -78,7 +78,6 @@ function iniciarJuego() {
         alert("Nos vemos pronto cuando estes listo!");
     }
 }
-
 
 iniciarJuego();
 
